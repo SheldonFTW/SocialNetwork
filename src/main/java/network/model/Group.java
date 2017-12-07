@@ -1,27 +1,27 @@
 package network.model;
 
-public class Post {
+import javax.naming.Name;
 
-    private String title;
+public class Group {
+
+    private String name;
     private String description;
     private int countOfFollovers;
-    private String dateOfPublication;
+    private String dateOfFoudation;
 
-
-
-    public Post(String title, String description, int countOfFollovers, String dateOfPublication) {
-        this.title = title;
+    public Group(String name, String description, int countOfFollovers, String dateOfFoudation) {
+        this.name = name;
         this.description = description;
         this.countOfFollovers = countOfFollovers;
-        this.dateOfPublication = dateOfPublication;
+        this.dateOfFoudation = dateOfFoudation;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -40,21 +40,23 @@ public class Post {
         this.countOfFollovers = countOfFollovers;
     }
 
-    public String getDateOfPublication() {
-        return dateOfPublication;
-    }
-
-    public void setDateOfPublication(String dateOfPublication) {
-        this.dateOfPublication = dateOfPublication;
+    public String getDateOfFoudation() {
+        return dateOfFoudation;
     }
 
     @Override
     public String toString() {
-        return "Post{" +
-                "title='" + title + '\'' +
+        return "Group{" +
+                "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", countOfFollovers=" + countOfFollovers +
-                ", dateOfPublication='" + dateOfPublication + '\'' +
+                ", dateOfFoudation='" + dateOfFoudation + '\'' +
                 '}';
+    }
+
+    public void setDateOfFoudation(String dateOfFoudation) {
+        this.dateOfFoudation = dateOfFoudation;
+
+
     }
 }

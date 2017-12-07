@@ -1,5 +1,6 @@
 package network.data;
 
+import network.model.Group;
 import network.model.Post;
 import network.model.User;
 
@@ -18,6 +19,7 @@ public class Database {
         return users;
 
     }
+
     public static Post[] getAllPost() {
         Post posts[] = new Post[4];
         final Post post = new Post("Spotr", "Soccer", 10, "01.01.17");
@@ -32,6 +34,26 @@ public class Database {
 
         return posts;
 
+    }
+
+    public static Group[] getAllGroup() {
+        Group groups[] = new Group[5];
+        final Group group = new Group("Fun", "Crazy things", 10, "01.12.14");
+        final Group group1 = new Group("Social", "Human behavior", 44, "07.03.17");
+        final Group group2 = new Group("Politic", "Braking news ", 1, "05.06.13");
+        final Group group3 = new Group("Enveromental Protection", "Forest", 44, "12.06.12");
+        final Group group4 = new Group("Science", "Space", 50, "19.02.10");
+
+        groups[0] = group;
+        groups[1] = group;
+        groups[2] = group;
+        groups[3] = group;
+        groups[4] = group;
+
+
+        return groups;
+
 
     }
 }
+
