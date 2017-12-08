@@ -28,9 +28,9 @@ public class Database {
         final Post post4 = new Post("Etc", "HZ", 16, "01.11.17");
 
         posts[0] = post;
-        posts[1] = post;
-        posts[2] = post;
-        posts[3] = post;
+        posts[1] = post2;
+        posts[2] = post3;
+        posts[3] = post4;
 
         return posts;
 
@@ -45,10 +45,10 @@ public class Database {
         final Group group4 = new Group("Science", "Space", 50, "19.02.10");
 
         groups[0] = group;
-        groups[1] = group;
-        groups[2] = group;
-        groups[3] = group;
-        groups[4] = group;
+        groups[1] = group1;
+        groups[2] = group2;
+        groups[3] = group3;
+        groups[4] = group4;
 
 
         return groups;
