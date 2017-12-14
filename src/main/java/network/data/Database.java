@@ -3,56 +3,66 @@ package network.data;
 import network.model.Group;
 import network.model.Post;
 import network.model.User;
+import training.Alex;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class Database {
 
-    public static User[] getAllUsers() {
-        User users[] = new User[3];
-        final User user = new User("boriabritva@gmail.com", "tratata123", "Diman", 28, "single");
-        final User user2 = new User("andrew@gmail.com", "tratata321", "Andrew", 29, "single");
-        final User user3 = new User("marina@gmail.com", "tratata231", "Marina", 30, "single");
+    public static List<User> getAllUsers() {
 
-        users[0] = user;
-        users[1] = user2;
-        users[2] = user3;
+        List<User> users = new LinkedList<>();
+
+        User user1 = new User("boriabritva@gmail.com", "5014095", "Dima", 28,"Single");
+        User user2 = new User("apetrovich@gmail.com", "tratata123", "Andrew", 30, "Single");
+        User user3 = new User("katerina@gmail.com ", "trumpurum456", "Katia",28,"Single");
+        User user4 = new User("sheldon@gmail.com", "atata890", "Roman", 29,"Single");
+
+        users.add(user1);
+        users.add(user2);
+        users.add(user3);
+        users.add(user4);
 
         return users;
 
     }
 
-    public static Post[] getAllPost() {
-        Post posts[] = new Post[4];
-        final Post post = new Post("Spotr", "Soccer", 10, "01.01.17");
-        final Post post2 = new Post("Sosial", "Live", 12, "01.12.17");
-        final Post post3 = new Post("Fun", "haha", 16, "11.11.17");
-        final Post post4 = new Post("Etc", "HZ", 16, "01.11.17");
+    public static List<Post> getAllPost() {
 
-        posts[0] = post;
-        posts[1] = post2;
-        posts[2] = post3;
-        posts[3] = post4;
+        List<Post> posts = new LinkedList<>();
+
+        Post post = new Post("Spotr", "Soccer", 10, "01.01.17");
+        Post post2 = new Post("Sosial", "Live", 12, "01.12.17");
+        Post post3 = new Post("Fun", "haha", 16, "11.11.17");
+        Post post4 = new Post("Etc", "HZ", 16, "01.11.17");
+
+        posts.add(post);
+        posts.add(post2);
+        posts.add(post3);
+        posts.add(post4);
 
         return posts;
 
     }
 
-    public static Group[] getAllGroup() {
-        Group groups[] = new Group[5];
-        final Group group = new Group("Fun", "Crazy things", 10, "01.12.14");
-        final Group group1 = new Group("Social", "Human behavior", 44, "07.03.17");
-        final Group group2 = new Group("Politic", "Braking news ", 1, "05.06.13");
-        final Group group3 = new Group("Enveromental Protection", "Forest", 44, "12.06.12");
-        final Group group4 = new Group("Science", "Space", 50, "19.02.10");
+    public static List<Group> getAllGroup() {
 
-        groups[0] = group;
-        groups[1] = group1;
-        groups[2] = group2;
-        groups[3] = group3;
-        groups[4] = group4;
+        List<Group> groups = new LinkedList<>();
 
+        Group group1 = new Group("Fun", "Crazy things", 10, "01.12.14");
+        Group group2 = new Group("Social", "Human behavior", 44, "07.03.17");
+        Group group3 = new Group("Politic", "Braking news ", 1, "05.06.13");
+        Group group4 = new Group("Enveromental Protection", "Forest", 44, "12.06.12");
+        Group group5 = new Group("Science", "Space", 50, "19.02.10");
+
+        groups.add(group1);
+        groups.add(group2);
+        groups.add(group3);
+        groups.add(group4);
+        groups.add(group5);
 
         return groups;
-
 
     }
 }
