@@ -17,7 +17,7 @@ public class UserService {
         return userDao.getFirs();
     }
 
-    public User getByName(String name) {
+    public List<User> getByName(String name) {
         final UserDao userDao = new UserDao();
         return userDao.getByName(name);
     }

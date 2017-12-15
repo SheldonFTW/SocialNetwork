@@ -1,9 +1,11 @@
 package network.controller;
 
+import network.exeption.NoFoundGroupException;
+import network.exeption.NoFoundPostException;
+import network.exeption.NoFoundUserException;
 import network.model.User;
 import network.service.UserService;
 
-import javax.xml.ws.Service;
 import java.util.List;
 
 public class UserContoller {
@@ -23,16 +25,16 @@ public class UserContoller {
 
         System.out.println("First user printed");
 
-        User getByName = userService.getByName("Dima");
-        System.out.println("Get by name: " + getByName);
+        List<User> userServiceByName = userService.getByName("Dima");
+        for (User elem : userServiceByName) {
+            System.out.println("Get by name: " + elem);
+
+        }
 
         User getByAge = userService.getByAge(28);
         System.out.println("Get by age:" + getByAge);
 
+
     }
-
-
-
-
 
 }

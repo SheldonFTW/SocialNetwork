@@ -11,5 +11,8 @@ public class GroupService {
         final GroupDao groupDao = new GroupDao();
         return groupDao.getAll();
     }
-
+    public List<Group> getByName(String name) {
+        final GroupDao groupDao = new GroupDao();
+        return groupDao.getByName(name);
+    }
 }

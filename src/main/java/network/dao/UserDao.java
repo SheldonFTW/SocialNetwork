@@ -1,6 +1,7 @@
 package network.dao;
 
 import network.data.Database;
+import network.exeption.NoFoundUserException;
 import network.model.User;
 
 import java.util.ArrayList;
@@ -21,16 +22,18 @@ public class UserDao {
         return Database.getAllUsers().get(FIRST_INDEX);
     }
 
-    public User getByName(String name) {
+    public List<User> getByName(String name) {
         List<User> users = getAll();
+        List<User> usersByName = new LinkedList<>();
         for (User elem : users) {
             if (name.equals(elem.getName())) {
-                return elem;
-            } else if (!name.equals(elem.getName())) {
-                System.out.println("There is no such user");
+                usersByName.add(elem);
             }
         }
-        return null;
+        if (usersByName.size() == 0) {
+            throw new NoFoundUserException();
+        }
+        return usersByName;
     }
 
     public User getByAge(Integer age) {
@@ -38,11 +41,8 @@ public class UserDao {
         for (User elemAge : users) {
             if (age.equals(elemAge.getAge())) {
                 return elemAge;
-            } else if (!elemAge.equals(elemAge.getAge())) {
-                System.out.println("There is no user with such age");
             }
         }
         return null;
     }
-
 }

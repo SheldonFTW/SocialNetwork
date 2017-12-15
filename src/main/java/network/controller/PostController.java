@@ -13,6 +13,11 @@ public class PostController {
 
         for (Post elems : posts) {
             System.out.println(elems);
+        }
+
+        List<Post> postTitle = postService.getByPostTitle("Etc");
+        for (Post elem : postTitle) {
+            System.out.println("Get by post title: " + elem);
 
         }
 

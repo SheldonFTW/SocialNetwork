@@ -13,5 +13,14 @@ public class GroupController {
         for (Group elems : groups) {
             System.out.println(elems);
         }
+        List<Group> getByName = groupService.getByName("Fun");
+        for (Group elem : getByName) {
+            System.out.println("Get group by name: " + elem);
+
+        }
+
+
+
     }
+
 }
