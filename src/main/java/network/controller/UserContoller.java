@@ -16,6 +16,19 @@ public class UserContoller {
             System.out.println(elem);
         }
 
+        System.out.println("All users printed");
+
+        User firstUser = userService.getFirst();
+        System.out.println(firstUser);
+
+        System.out.println("First user printed");
+
+        User getByName = userService.getByName("Dima");
+        System.out.println("Get by name: " + getByName);
+
+        User getByAge = userService.getByAge(28);
+        System.out.println("Get by age:" + getByAge);
+
     }
 
 
