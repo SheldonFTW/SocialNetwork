@@ -5,25 +5,11 @@ import network.model.User;
 
 import java.util.List;
 
-public class UserService {
+public interface UserService {
 
-    public List<User> getAll() {
-        final UserDao userDao = new UserDao();
-        return userDao.getAll();
-    }
+    List<User> getAll();
+    User getFirst();
+    List<User> getByName(String name);
+    User getByAge(Integer age);
 
-    public User getFirst() {
-        final UserDao userDao = new UserDao();
-        return userDao.getFirs();
-    }
-
-    public List<User> getByName(String name) {
-        final UserDao userDao = new UserDao();
-        return userDao.getByName(name);
-    }
-
-    public User getByAge(Integer age) {
-        final UserDao userDao = new UserDao();
-        return userDao.getByAge(age);
-    }
 }

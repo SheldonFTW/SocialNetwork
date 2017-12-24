@@ -1,5 +1,7 @@
 package network.model;
 
+import java.time.LocalDate;
+
 public class User {
 
     private String email;
@@ -7,9 +9,7 @@ public class User {
     private String name;
     private int age;
     private String status;
-
-    public User() {
-    }
+    private LocalDate birthday;
 
     public User(String email, String password, String name, int age, String status) {
         this.email = email;
@@ -59,6 +59,15 @@ public class User {
         this.status = status;
     }
 
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -67,6 +76,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", status='" + status + '\'' +
+                ", birthday=" + birthday +
                 '}';
     }
 }

@@ -8,27 +8,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class PostDao {
+public interface PostDao {
 
-    public List<Post> getAll() {
-
-        return Database.getAllPost();
-
-    }
-
-    public List<Post> getByPostTitle(String title) {
-        List<Post> posts = getAll();
-        List<Post> postsByTitle = new LinkedList<>();
-        for (Post elem : posts) {
-            if (title.equals(elem.getTitle())) {
-                postsByTitle.add(elem);
-            }
-        }
-        if (postsByTitle.size() == 0) {
-            throw new NoFoundPostException();
-        }
-        return postsByTitle;
-
-    }
+    List<Post> getAll();
+    List<Post> getByPostTitle(String title);
 
 }

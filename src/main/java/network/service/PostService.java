@@ -5,16 +5,11 @@ import network.model.Post;
 
 import java.util.List;
 
-public class PostService {
+public interface PostService {
 
-    public List<Post> getAll() {
-        final PostDao postDao = new PostDao();
-        return postDao.getAll();
+    List<Post> getAll();
 
-    }
-    public List<Post> getByPostTitle(String title) {
-        final PostDao postDao = new PostDao();
-        return postDao.getByPostTitle(title);
+    List<Post> getByPostTitle(String title);
 
-    }
+
 }
